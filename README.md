@@ -7,7 +7,40 @@ The local API appears to be based off the Radio Thermostat Company of America Wi
 ## Local API Endpoints
 `http://<ip-address>/sys` [1,1]
 
-Fetches the basic state of the system
+Fetches the basic state of the GDO.
+
+```
+{
+    "uuid": "XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "interface": "uap",
+    "prov": {
+        "types": []
+    },
+    "connection": {
+        "station": {
+            "mac_addr": "XX-XX-XX-XX-XX-XX",
+            "configured": 1,
+            "status": 2,
+            "ssid": "WifiNetwork",
+            "bssid": "XX:XX:XX:XX:XX:XX",
+            "channel": 11,
+            "security": 4,
+            "rssi": -40,
+            "ip": {
+                "ipv4": {
+                    "iptype": 1,
+                    "ipaddr": "192.168.1.80",
+                    "ipmask": "255.255.255.0",
+                    "ipgw": "192.168.1.1",
+                    "ipdns1": "1.1.1.1",
+                    "ipdns2": "0.0.0.0"
+                }
+            }
+        }
+    }
+}
+```
+
 
 <hr>
 
