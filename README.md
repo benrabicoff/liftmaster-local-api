@@ -29,10 +29,10 @@ Fetches the basic state of the GDO.
             "ip": {
                 "ipv4": {
                     "iptype": 1,
-                    "ipaddr": "192.168.1.80",
+                    "ipaddr": "XXX.XXX.X.XXX",
                     "ipmask": "255.255.255.0",
-                    "ipgw": "192.168.1.1",
-                    "ipdns1": "1.1.1.1",
+                    "ipgw": "XXX.XXX.X.XXX",
+                    "ipdns1": "X.X.X.X",
                     "ipdns2": "0.0.0.0"
                 }
             }
@@ -120,9 +120,9 @@ Connection state of the GDO
 
 `http://<ip-address>/sys/interface` [1,0]
 
-Connection interface of the system
+Connection interface of the GDO
 
-```
+```json
 {
     "interface": "uap"
 }
@@ -144,10 +144,10 @@ Network details of the GDO
     "ip": {
         "ipv4": {
             "iptype": 1,
-            "ipaddr": "192.168.1.80",
+            "ipaddr": "XXX.XXX.X.XXX",
             "ipmask": "255.255.255.0",
-            "ipgw": "192.168.1.1",
-            "ipdns1": "1.1.1.1",
+            "ipgw": "XXX.XXX.X.XXX",
+            "ipdns1": "X.X.X.X",
             "ipdns2": "0.0.0.0"
         }
     }
