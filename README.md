@@ -1,5 +1,74 @@
 # LiftMaster Local API
 
+The local API appears to be based off the Radio Thermostat Company of America Wi-Fi USNAP Module API. You can reference the API docs here: .
+
+## Local API Endpoints
+/sys
+
+GET: YES · POST: YES
+
+Fetches the basic state of the system
+
+/sys/services
+
+GET: YES · POST: NO
+
+Retrieves the list of services available on the device
+
+/sys/command 
+
+GET: NO · POST: YES
+
+Currently only “reboot” command is supported.
+
+`curl -d '{"command": "reboot"}' http://<ip-address>/sys/command`
+
+/sys/connection
+
+GET: YES · POST: NO
+
+Connection state of the system
+
+/sys/interface
+
+GET: YES · POST: NO
+
+Connection interface of the system
+
+/sys/network
+
+GET: YES · POST: YES
+
+Network details of the system
+
+/sys/mode
+
+GET: YES · POST: YES
+
+Indicates system operating mode.
+
+0 – provisioning, 1 – normal (Integer)
+
+`curl -d '{“mode”: 0}' http://<ip-address>/sys/mode`
+
+* A POST with the value of mode as 0, resets the device back into provisioning mode.
+
+/sys/prov_status
+
+GET: NO · POST: YES
+
+Finish MyQ setup?
+
+`curl -d '{"finish": 1}' http://<ip-address>/sys/prov_status`
+
+/sys/time
+
+GET: YES · POST: YES
+
+Unix time stamp 
+
+`curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time`
+
 ## Webserver Files
 ### HTML
 `http://<ipaddress>/index.html` (redirects to start.html)
