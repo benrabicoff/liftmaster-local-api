@@ -15,6 +15,8 @@ Fetches the basic state of the system
 
 Retrieves the list of services available on the device
 
+<hr>
+
 `http://<ip-address>/sys/command` [0,1]
 
 Currently only “reboot” command is supported.
@@ -23,17 +25,25 @@ Currently only “reboot” command is supported.
 curl -d '{"command": "reboot"}' http://<ip-address>/sys/command</code>
 ```
 
+<hr>
+
 `http://<ip-address>/sys/connection` [1,0]
 
 Connection state of the system
+
+<hr>
 
 `http://<ip-address>/sys/interface` [1,0]
 
 Connection interface of the system
 
+<hr>
+
 `http://<ip-address>/sys/network` [1,1]
 
 Network details of the system
+
+<hr>
 
 `http://<ip-address>/sys/mode` [1,1]
 
@@ -47,6 +57,8 @@ curl -d '{“mode”: 0}' http://<ip-address>/sys/mode
 
 A POST with the value of mode as 0, resets the device back into provisioning mode.
 
+<hr>
+
 `http://<ip-address>/sys/prov_status` [0,1]
 
 Finish MyQ setup?
@@ -54,6 +66,8 @@ Finish MyQ setup?
 ```
 curl -d '{"finish": 1}' http://<ip-address>/sys/prov_status
 ```
+
+<hr>
 
 `http://<ip-address>/sys/time` [1,1]
 
