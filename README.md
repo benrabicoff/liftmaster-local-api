@@ -3,21 +3,15 @@
 The local API appears to be based off the Radio Thermostat Company of America Wi-Fi USNAP Module API. You can reference the API docs [here](RadioThermostat_CT50_Honeywell_Wifi_API_V1.3.pdf).
 
 ## Local API Endpoints
-`http://<ip-address>/sys`
-
-GET: YES · POST: YES
+`http://<ip-address>/sys` [1,1]
 
 Fetches the basic state of the system
 
-`http://<ip-address>/sys/services`
-
-GET: YES · POST: NO
+`http://<ip-address>/sys/services` [1,0]
 
 Retrieves the list of services available on the device
 
-`http://<ip-address>/sys/command`
-
-GET: NO · POST: YES
+`http://<ip-address>/sys/command` [0,1]
 
 Currently only “reboot” command is supported.
 
@@ -25,27 +19,19 @@ Currently only “reboot” command is supported.
 curl -d '{"command": "reboot"}' http://<ip-address>/sys/command</code>
 ```
 
-`http://<ip-address>/sys/connection`
-
-GET: YES · POST: NO
+`http://<ip-address>/sys/connection` [1,0]
 
 Connection state of the system
 
-`http://<ip-address>/sys/interface`
-
-GET: YES · POST: NO
+`http://<ip-address>/sys/interface` [1,0]
 
 Connection interface of the system
 
-`http://<ip-address>/sys/network`
-
-GET: YES · POST: YES
+`http://<ip-address>/sys/network` [1,1]
 
 Network details of the system
 
-`http://<ip-address>/sys/mode`
-
-GET: YES · POST: YES
+`http://<ip-address>/sys/mode` [1,1]
 
 Indicates system operating mode.
 
@@ -57,9 +43,7 @@ curl -d '{“mode”: 0}' http://<ip-address>/sys/mode
 
 A POST with the value of mode as 0, resets the device back into provisioning mode.
 
-`http://<ip-address>/sys/prov_status`
-
-GET: NO · POST: YES
+`http://<ip-address>/sys/prov_status` [0,1]
 
 Finish MyQ setup?
 
@@ -67,9 +51,7 @@ Finish MyQ setup?
 curl -d '{"finish": 1}' http://<ip-address>/sys/prov_status
 ```
 
-`http://<ip-address>/sys/time`
-
-GET: YES · POST: YES
+`http://<ip-address>/sys/time` [1,1]
 
 Unix time stamp 
 
