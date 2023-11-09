@@ -9,7 +9,7 @@ The local API appears to be based off the Radio Thermostat Company of America Wi
 
 Fetches the basic state of the GDO.
 
-```
+```json
 {
     "uuid": "XXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "interface": "uap",
@@ -46,7 +46,50 @@ Fetches the basic state of the GDO.
 
 `http://<ip-address>/sys/services` [1,0]
 
-Retrieves the list of services available on the device
+Retrieves the list of services available on the GDO
+
+```json
+{
+    "httpd_handlers": {
+        "/sys/network": [
+            1,
+            1
+        ],
+        "/sys/time": [
+            1,
+            1
+        ],
+        "/sys/command": [
+            0,
+            1
+        ],
+        "/sys/connection": [
+            1,
+            0
+        ],
+        "/sys/services": [
+            1,
+            0
+        ],
+        "/sys/prov_status": [
+            0,
+            1
+        ],
+        "/sys/interface": [
+            1,
+            0
+        ],
+        "/sys": [
+            1,
+            1
+        ],
+        "/sys/mode": [
+            1,
+            1
+        ]
+    }
+}
+```
 
 <hr>
 
@@ -62,7 +105,16 @@ curl -d '{"command": "reboot"}' http://<ip-address>/sys/command</code>
 
 `http://<ip-address>/sys/connection` [1,0]
 
-Connection state of the system
+Connection state of the GDO
+
+```json
+{
+    "auth_failed": 0,
+    "conn_failed": 0,
+    "dhcp_failed": 0,
+    "conn_success": 1
+}
+```
 
 <hr>
 
@@ -70,17 +122,49 @@ Connection state of the system
 
 Connection interface of the system
 
+```
+{
+    "interface": "uap"
+}
+```
+
 <hr>
 
 `http://<ip-address>/sys/network` [1,1]
 
-Network details of the system
+Network details of the GDO
+
+```json
+{
+    "ssid": "WifiNetwork",
+    "bssid": "XX:XX:XX:XX:XX:XX",
+    "channel": 11,
+    "security": 4,
+    "rssi": -40,
+    "ip": {
+        "ipv4": {
+            "iptype": 1,
+            "ipaddr": "192.168.1.80",
+            "ipmask": "255.255.255.0",
+            "ipgw": "192.168.1.1",
+            "ipdns1": "1.1.1.1",
+            "ipdns2": "0.0.0.0"
+        }
+    }
+}
+```
 
 <hr>
 
 `http://<ip-address>/sys/mode` [1,1]
 
 Indicates system operating mode.
+
+```json
+{
+    "mode": 1
+}
+```
 
 0 – provisioning, 1 – normal (Integer)
 
@@ -104,7 +188,11 @@ curl -d '{"finish": 1}' http://<ip-address>/sys/prov_status
 
 `http://<ip-address>/sys/time` [1,1]
 
-Unix time stamp 
+Unix time stamp
+
+```json
+{"epoch":1699536654}
+```
 
 ```
 curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
