@@ -15,13 +15,15 @@ GET: YES · POST: NO
 
 Retrieves the list of services available on the device
 
-`/sys/command`
+`http://<ip-address>/sys/command`
 
 GET: NO · POST: YES
 
 Currently only “reboot” command is supported.
 
-<code>curl -d '{"command": "reboot"}' http://[ip-address]/sys/command</code>
+```
+curl -d '{"command": "reboot"}' http://<ip-address>/sys/command</code>
+```
 
 /sys/connection
 
