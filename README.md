@@ -3,14 +3,23 @@
 ## Webserver Files
 ### HTML
 `http://<ipaddress>/index.html` (redirects to start.html)
+
 `http://<ip-address>/start.html`
+
 `http://<ip-address>/about`
+
 `http://<ip-address>/about.html`
+
 `http://<ip-address>/config.html`
+
 `http://<ip-address>/config_gdo.html`
+
 `http://<ip-address>/config_hub.html`
+
 `http://<ip-address>/connect_gdo.html`
+
 `http://<ip-address>/connect_hub.html`
+
 `http://<ip-address>/game.html` (ref’d in about.html, but 404s)
 
 ###  JSON
