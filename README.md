@@ -3,13 +3,13 @@
 The local API appears to be based off the Radio Thermostat Company of America Wi-Fi USNAP Module API. You can reference the API docs here: .
 
 ## Local API Endpoints
-/sys
+`http://<ip-address>/sys`
 
 GET: YES · POST: YES
 
 Fetches the basic state of the system
 
-/sys/services
+`http://<ip-address>/sys/services`
 
 GET: YES · POST: NO
 
@@ -25,25 +25,25 @@ Currently only “reboot” command is supported.
 curl -d '{"command": "reboot"}' http://<ip-address>/sys/command</code>
 ```
 
-/sys/connection
+`http://<ip-address>/sys/connection`
 
 GET: YES · POST: NO
 
 Connection state of the system
 
-/sys/interface
+`http://<ip-address>/sys/interface`
 
 GET: YES · POST: NO
 
 Connection interface of the system
 
-/sys/network
+`http://<ip-address>/sys/network`
 
 GET: YES · POST: YES
 
 Network details of the system
 
-/sys/mode
+`http://<ip-address>/sys/mode`
 
 GET: YES · POST: YES
 
@@ -51,25 +51,31 @@ Indicates system operating mode.
 
 0 – provisioning, 1 – normal (Integer)
 
-`curl -d '{“mode”: 0}' http://<ip-address>/sys/mode`
+```
+curl -d '{“mode”: 0}' http://<ip-address>/sys/mode
+```
 
-* A POST with the value of mode as 0, resets the device back into provisioning mode.
+A POST with the value of mode as 0, resets the device back into provisioning mode.
 
-/sys/prov_status
+`http://<ip-address>/sys/prov_status`
 
 GET: NO · POST: YES
 
 Finish MyQ setup?
 
-`curl -d '{"finish": 1}' http://<ip-address>/sys/prov_status`
+```
+curl -d '{"finish": 1}' http://<ip-address>/sys/prov_status
+```
 
-/sys/time
+`http://<ip-address>/sys/time`
 
 GET: YES · POST: YES
 
 Unix time stamp 
 
-`curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time`
+```
+curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
+```
 
 ## Webserver Files
 ### HTML
