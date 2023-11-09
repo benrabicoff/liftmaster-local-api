@@ -1,8 +1,8 @@
 # LiftMaster Local API
 
 ## HTML
-http://<ip-address>/index.html (redirects to start.html)
-http://<ip-address>/start.html
+`http://<ipaddress>/index.html` (redirects to start.html)
+`http://<ip-address>/start.html`
 http://<ip-address>/about
 http://<ip-address>/about.html
 http://<ip-address>/config.html
