@@ -218,10 +218,20 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/connect_hub.html`
 
+`http://<ip-address>/engabout.html`
+
 `http://<ip-address>/game.html` (ref’d in about.html, but 404s)
+
+`http://<ip-address>/rssi.html`
+
+`http://<ip-address>/start_connap.html`
+
+`http://<ip-address>/testurl.html`
 
 ###  JSON
 `http://<ip-address>/jabout`
+
+`http://<ip-address>/jengabout`
 
 `http://<ip-address>/jconfig_save` (ref’d but 404s)
 
@@ -238,12 +248,24 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/brand.css`
 
-`http://<ip-address>/style.css`
+`http://<ip-address>/chamberlain.css`
+
+`http://<ip-address>/craftsman.css`
+
+`http://<ip-address>/liftmaster.css`
+
+`http://<ip-address>/merlin.css`
 
 `http://<ip-address>/myq.css`
 
+`http://<ip-address>/style.css`
+
 ### Javascript
 `http://<ip-address>/brand.js`
+
+`http://<ip-address>/craftsman.js`
+
+`http://<ip-address>/cgi.js`
 
 `http://<ip-address>/language.js`
 
