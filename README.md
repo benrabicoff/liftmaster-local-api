@@ -1,6 +1,6 @@
 # LiftMaster Local API
 
-The local API appears to be based off the Radio Thermostat Company of America Wi-Fi USNAP Module API. You can reference the API docs here: .
+The local API appears to be based off the Radio Thermostat Company of America Wi-Fi USNAP Module API. You can reference the API docs [here](RadioThermostat_CT50_Honeywell_Wifi_API_V1.3.pdf).
 
 ## Local API Endpoints
 `http://<ip-address>/sys`
