@@ -9,6 +9,8 @@ The local API appears to be based off the Radio Thermostat Company of America Wi
 
 Fetches the basic state of the system
 
+<hr>
+
 `http://<ip-address>/sys/services` [1,0]
 
 Retrieves the list of services available on the device
