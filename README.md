@@ -200,7 +200,7 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 ## Webserver Files
 ### HTML
-`http://<ipaddress>/index.html` <sup>_(redirects to start.html)_</sup>
+`http://<ipaddress>/index.html` <small>_(redirects to start.html)_</small>
 
 `http://<ip-address>/start.html`
 
@@ -220,7 +220,7 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/engabout.html`
 
-`http://<ip-address>/game.html` <sup>_(ref’d in about.html, but 404s)_</sup>
+`http://<ip-address>/game.html` <small>_(ref’d in about.html, but 404s)_</small>
 
 `http://<ip-address>/rssi.html`
 
