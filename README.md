@@ -226,6 +226,10 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/start_connap.html`
 
+`http://<ip-address>/start_gdo.html`
+
+`http://<ip-address>/start_hub.html`
+
 `http://<ip-address>/testurl.html`
 
 ###  JSON
@@ -236,6 +240,10 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 `http://<ip-address>/jconfig_save` (ref’d but 404s)
 
 `http://<ip-address>/jscan_results` (ref’d but 404s)
+
+`http://<ip-address>/jsec_supported`
+
+`http://<ip-address>/jsensortest`
 
 `http://<ip-address>/jserial`
 
