@@ -95,7 +95,7 @@ Retrieves the list of services available on the GDO
 
 `http://<ip-address>/sys/command` [0,1]
 
-Currently only “reboot” command is supported.
+_Currently only “reboot” command is supported._
 
 ```
 curl -d '{"command": "reboot"}' http://<ip-address>/sys/command</code>
@@ -172,7 +172,7 @@ Indicates system operating mode.
 curl -d '{“mode”: 0}' http://<ip-address>/sys/mode
 ```
 
-A POST with the value of mode as 0, resets the device back into provisioning mode.
+_A POST with the value of mode as 0, resets the device back into provisioning mode._
 
 <hr>
 
@@ -200,7 +200,7 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 ## Webserver Files
 ### HTML
-`http://<ipaddress>/index.html` (redirects to start.html)
+`http://<ipaddress>/index.html` _(redirects to start.html)_
 
 `http://<ip-address>/start.html`
 
@@ -220,7 +220,7 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/engabout.html`
 
-`http://<ip-address>/game.html` (ref’d in about.html, but 404s)
+`http://<ip-address>/game.html` _(ref’d in about.html, but 404s)_
 
 `http://<ip-address>/rssi.html`
 
@@ -237,9 +237,21 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/jengabout`
 
-`http://<ip-address>/jconfig_save` (ref’d but 404s)
+`http://<ip-address>/jconfig_clear` _(ref'd in firmware, but 404s)_
 
-`http://<ip-address>/jscan_results` (ref’d but 404s)
+`http://<ip-address>/jconfig_save` _(ref’d but 404s)_
+
+`http://<ip-address>/jconnect_serial` _(ref'd in firmware, but 404s)_
+
+`http://<ip-address>/jdevice_info` _(ref'd in firmware, but 404s)_
+
+`http://<ip-address>/jexit` _(ref'd in firmware, but 404s)_
+
+`http://<ip-address>/jlang_get` _(ref'd in firmware, but 404s)_
+
+`http://<ip-address>/jlang_set` _(ref'd in firmware, but 404s)_
+
+`http://<ip-address>/jscan_results` _(ref’d but 404s)_
 
 `http://<ip-address>/jsec_supported`
 
@@ -247,7 +259,7 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/jserial`
 
-`http://<ip-address>/jserial_connect` (ref’d but 404s)
+`http://<ip-address>/jserial_connect` _(ref’d but 404s)_
 
 `http://<ip-address>/jstart`
 
