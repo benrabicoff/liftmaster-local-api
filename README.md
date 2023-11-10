@@ -294,11 +294,29 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 ### Images
 `http://<ip-address>/adjustbutton.gif`
 
+`http://<ip-address>/craftsmanlogo.png`
+
+`http://<ip-address>/liftmasterlogo.png`
+
 `http://<ip-address>/mainlogo.png`
+
+`http://<ip-address>/merlinlogo.png`
 
 `http://<ip-address>/myqlogo.png`
 
 `http://<ip-address>/myfavicon.png`
+
+`http://<ip-address>/myfaviconch.png`
+
+`http://<ip-address>/myfaviconcr.png`
+
+`http://<ip-address>/myfaviconlm.png`
+
+`http://<ip-address>/myfaviconmr.png`
+
+`http://<ip-address>/myfaviconmq.png`
+
+`http://<ip-address>/myqicon.png`
 
 `http://<ip-address>/grayspin.gif`
 
