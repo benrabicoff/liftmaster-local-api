@@ -239,12 +239,9 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 
 `http://<ip-address>/jconfig_clear` _(ref'd in firmware, but 404s)_
 
-```
-/jconfig_clear?credentials=reset&end=1
-/jconfig_clear?credentials=factoryreset&end=1
-```
+`http://<ip-address>/jconfig_clear?credentials=reset&end=1`
 
-_There's two paths are mentioned in the firmware_
+`http://<ip-address>/jconfig_clear?credentials=factoryreset&end=1`
 
 `http://<ip-address>/jconfig_save` _(ref’d but 404s)_
 
