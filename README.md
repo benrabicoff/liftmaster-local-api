@@ -233,7 +233,7 @@ curl -d '{"epoch": 1699485550}' http://<ip-address>/sys/time
 `http://<ip-address>/testurl.html`
 
 ###  JSON
-`http://<ip-address>/jabout`
+`http://<ip-address>/jabout` _(an entry of 'special': "Special Shout out to all MyQ team members!" will appear at random)_
 
 `http://<ip-address>/jengabout`
 
